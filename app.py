@@ -23,6 +23,6 @@ def datums():
 def lietotajs(vards,vecums):
     # return f'<h1>{vards}, {vecums}</h1>'
     with open('data.json','w',encoding='UTF-8') as file:
-        
+        return
 
 app.run(host='0.0.0.0',port=81)
