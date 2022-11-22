@@ -4,9 +4,11 @@
 from flask import Flask
 import json
 import datetime
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.config["JSON_AS_ASCII"]=False
+CORS(app)
 
 @app.route('/')
 def index():
@@ -44,6 +46,11 @@ def send(vards,zina):
 def datums():
     return (f'<h1>Today is {datetime.datetime.now()}</h1>')
 
+@app.route('/read')
+def read():
+    with open('chat.json','r',encoding='utf-8') as r:
+        msg = r.read()
+    return msg
 
 
 @app.route('/user/<vards>/<vecums>')

@@ -9,3 +9,12 @@ function sutitZinu(){
     chatMsg.innerHTML += '<br/>' + myMsg.value
     fetch(API+'/send/'+vards.value+'/'+myMsg.value)
 }
+
+async function loadChatMsg(){
+    let dataFromServer = await fetch(API + '/read')
+    let data = await dataFromServer.text()
+    
+    chatMsg.innerHTML = data
+}
+
+setInterval(loadChatMsg,1499)

@@ -1,22 +1,22 @@
 body{
-    background-color: rgb(239, 165, 68);
+    background-color: rgb(139, 135, 81);
 }
 
 .wrapper
 {
     width: 50%;
     height: 70%;
-    border: 3px solid;
+    border: 11px solid;
     padding: 50px;
     margin: auto;
 }
 
 .chatazinas
 {
-    background-color: rgb(198, 215, 215);
+    background-color: rgb(0, 0, 0);
     height: 70%;
     padding: 10px;
-    color: rgb(239, 165, 68);
+    color: rgb(255, 11, 11);
 }
 
 .vards
@@ -26,5 +26,4 @@ body{
 
 .vards:focus{
     outline: none;
-    background-color: rgb(107, 226, 63);
 }
