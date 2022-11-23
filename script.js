@@ -17,4 +17,4 @@ async function loadChatMsg(){
     chatMsg.innerHTML = data
 }
 
-setInterval(loadChatMsg,1499)
+// setInterval(loadChatMsg,1499)
