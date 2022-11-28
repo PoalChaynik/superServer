@@ -18,3 +18,18 @@ async function loadChatMsg(){
 }
 
 // setInterval(loadChatMsg,1499)
+
+async function loadChatMsgJson(){
+    let dataFromServer = await fetch(API + '/read')
+    let data = await dataFromServer.json()
+
+    chatMsg.innerHTML = ''
+
+    i=0;
+    while(i < await data.length){
+        chatMsg.innerHTML = chatMsg.innerHTML + '['+data[i]['laiks'] + '] '+ data[i]['vards'] + ': ' + data[i]['zina'] + '<br/>'
+        i+=1;
+    }
+} 
+
+setInterval(loadChatMsgJson,999)
